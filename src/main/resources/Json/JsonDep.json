@@ -1,0 +1,185 @@
+{
+  "types" : [
+    {
+      "name" : "Acero",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Agua",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Bicho",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Dragon",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Electrico",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Fantasma",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Fuego",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Hada",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Hielo",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Lucha",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Normal",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Planta",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Psiquico",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Roca",
+      "descrip" : "---",
+      "img" : "---"
+    },{
+      "name" : "Siniestro",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Tierra",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Veneno",
+      "descrip" : "---",
+      "img" : "---"
+    },
+    {
+      "name" : "Volador",
+      "descrip" : "---",
+      "img" : "---"
+    }
+  ],
+  "pokemon" : [
+    {
+      "type" : "Acero",
+      "name" : "Registeel",
+      "pokedex" : 379
+    },
+    {
+      "type" : "Agua",
+      "name" : "Shellder",
+      "pokedex" : 90
+    },
+    {
+      "type" : "Bicho",
+      "name" : "Spidops",
+      "pokedex" : 918
+    },
+    {
+      "type" : "Dragon",
+      "name" : "Haxorus",
+      "pokedex" : 612
+    },
+    {
+      "type" : "Electrico",
+      "name" : "Electivire",
+      "pokedex" : 466
+    },
+    {
+      "type" : "Fantasma",
+      "name" : "Mismagius",
+      "pokedex" : 429
+    },
+    {
+      "type" : "Fuego",
+      "name" : "Darumaka",
+      "pokedex" : 554
+    },
+    {
+      "type" : "Hada",
+      "name" : "Xerneas",
+      "pokedex" : 716
+    },
+    {
+      "type" : "Hielo",
+      "name" : "Glalie",
+      "pokedex" : 362
+    },
+    {
+      "type" : "Lucha",
+      "name" : "Hitmontop",
+      "pokedex" : 237
+    },
+    {
+      "type" : "Normal",
+      "name" : "Zigzagoon",
+      "pokedex" : 263
+    },
+    {
+      "type" : "Planta",
+      "name" : "Sceptile",
+      "pokedex" : 254
+    },{
+      "type" : "Psíquico",
+      "name" : "Mewtwo",
+      "pokedex" : 150
+    },
+    {
+      "type" : "Roca",
+      "name" : "Gigalith",
+      "pokedex" : 526
+    },
+    {
+      "type" : "Siniestro",
+      "name" : "Poochyena",
+      "pokedex" : 261
+    },
+    {
+      "type" : "Tierra",
+      "name" : "Marowak",
+      "pokedex" : 105
+    },
+    {
+      "type" : "Veneno",
+      "name" : "Weezing",
+      "pokedex" : 110
+    },
+    {
+      "type" : "Volador",
+      "name" : "Rookidee",
+      "pokedex" : 821
+    }
+
+]
+}
