@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemons de cada tipo</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <h1>Lista de los pokemons</h1>
+</header>
+<main>
+  <section>
+    <h2>Pokemons</h2>
+    <ul>
+      <li th:each="pkmn : ${Pokemon}">
+        <h3 th:text="${pkmn.name}">Nombre de Pokemon</h3>
+        <a th:href="@{'../Pokemons/info_pkmn_'+${pkmn.name}+'.html'}">Ver detalles pokemon</a>
+      </li>
+    </ul>
+  </section>
+  <a href=""></a>
+</main>
+</body>
+</html>

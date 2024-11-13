@@ -69,7 +69,8 @@
       "name" : "Roca",
       "descrip" : "---",
       "img" : "---"
-    },{
+    },
+    {
       "name" : "Siniestro",
       "descrip" : "---",
       "img" : "---"
@@ -150,7 +151,8 @@
       "type" : "Planta",
       "name" : "Sceptile",
       "pokedex" : 254
-    },{
+    },
+    {
       "type" : "Psíquico",
       "name" : "Mewtwo",
       "pokedex" : 150
