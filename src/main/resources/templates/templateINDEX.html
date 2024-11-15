@@ -20,7 +20,7 @@
                     <img th:src="@{${tipo.img}}" alt="IMAGEN" width="5%">
                 </div>
                 <p th:text="${tipo.descrip}">Descripcion del tipo</p>
-                <a th:href="'/Tipos/info_tipo_' + ${tipo.name} + '.html'">Ver pokemons de esos tipos</a>
+                <a th:href="'Tipos/tipo_' + ${tipo.name} + '.html'">Ver pokemons de esos tipos</a>
 
             </li>
         </ul>

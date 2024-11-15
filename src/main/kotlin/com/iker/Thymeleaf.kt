@@ -59,6 +59,7 @@ fun main() {
         writeHTML(fileNameTipo, tipoHTML)
         println("Generated page for type: ${tipo.name}")
     }
+
 }
 
 private fun writeHTML(fileName: String, content: String) {
