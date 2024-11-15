@@ -58,6 +58,12 @@ fun main() {
 
         writeHTML(fileNameTipo, tipoHTML)
         println("Generated page for type: ${tipo.name}")
+
+        for (pkmn in data.pokemon){
+            println(pkmn.name)
+            val fileNamePkmn = "src/main/resources/html/Pokemons/${pkmn.name}.html"
+            writeHTML(fileNamePkmn,tipoHTML)
+        }
     }
 
 }
