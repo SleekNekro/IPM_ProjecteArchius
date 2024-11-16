@@ -13,60 +13,52 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import com.iker.Type as Type
 
 fun main() {
-    // Configure template resolver
+    // Configurar el template engine
     val templateResolver = ClassLoaderTemplateResolver().apply {
         prefix = "templates/"
         suffix = ".html"
     }
 
-    // Configure template engine
     val templateEngine = TemplateEngine().apply {
         setTemplateResolver(templateResolver)
     }
 
-    // Load data
+    // Cargar datos del JSON
     val data = loadTypesFromJson("src/main/resources/Json/JsonDep.json")
 
-    // Generate main index HTML
-    println("Types: ${data.types}")  // Debugging line
-    val context = Context().apply {
-        if (data.types.isNotEmpty()) {
-            setVariable("types", data.types)
-        } else {
-            println("No types found in data!")
-            setVariable("types", emptyList<Type>())  // Use an empty list if no types are found
-        }
+    // Generar la página principal (index.html)
+    val indexContext = Context().apply {
+        setVariable("types", data.types)
     }
 
+    val indexWriter = StringWriter()
+    templateEngine.process("templateINDEX.html", indexContext, indexWriter)
+    writeHTML("src/main/resources/html/index.html", indexWriter.toString())
+    println("Página principal generada: src/main/resources/html/index.html")
 
-    val writer = StringWriter()
-    templateEngine.process("templateINDEX.html", context, writer)
-    writeHTML("src/main/resources/html/index.html", writer.toString())
-
-    // Generate individual type HTML pages
+    // Generar páginas individuales para cada tipo
     for (tipo in data.types) {
-        println(tipo.name)
+        println("Generando página para tipo: ${tipo.name}")
 
-        val contextType = Context().apply {
+        // Filtrar los Pokémon que corresponden al tipo actual
+        val matchingPokemon = data.pokemon.filter { it.type.equals(tipo.name, ignoreCase = true) }
+
+        // Crear contexto para el tipo
+        val typeContext = Context().apply {
             setVariable("tipo", tipo)
-            val matchingPokemon = data.pokemon.filter { it.type == tipo.name }
             setVariable("pokemon", matchingPokemon)
         }
 
-        val tipoHTML: String = templateEngine.process("templatePKMN", contextType)
+        // Generar HTML para la página del tipo
+        val typeHTML = templateEngine.process("templatePKMN.html", typeContext)
         val fileNameTipo = "src/main/resources/html/Tipos/tipo_${tipo.name}.html"
 
-        writeHTML(fileNameTipo, tipoHTML)
-        println("Generated page for type: ${tipo.name}")
-
-        for (pkmn in data.pokemon){
-            println(pkmn.name)
-            val fileNamePkmn = "src/main/resources/html/Pokemons/${pkmn.name}.html"
-            writeHTML(fileNamePkmn,tipoHTML)
-        }
+        // Escribir el archivo
+        writeHTML(fileNameTipo, typeHTML)
+        println("Página generada para tipo ${tipo.name}: $fileNameTipo")
     }
-
 }
+
 
 private fun writeHTML(fileName: String, content: String) {
     try {
@@ -79,10 +71,10 @@ private fun writeHTML(fileName: String, content: String) {
 }
 
 fun loadTypesFromJson(filePath: String): Data {
-    val mapper = ObjectMapper()
-    val data = mapper.readValue(File(filePath), Data::class.java)
-    println("Loaded data: $data")  // This will print the deserialized object
-    return data
+    val mapper = ObjectMapper().apply {
+        findAndRegisterModules()
+    }
+    return mapper.readValue(File(filePath),Data::class.java)
 }
 
 
