@@ -406,7 +406,8 @@ rss.xml
 
 # Capturas de las páginas creadas:
 ## Captura de el index.html.
-
+![Alt](https://github.com/SleekNekro/IPM_ProjecteArchius/blob/master/captures/Captura%20de%20pantalla%202024-12-06%20121622.png)
 
 Captura de detalles tipos
 Captura2
+![Alt](https://github.com/SleekNekro/IPM_ProjecteArchius/blob/master/captures/Captura%20de%20pantalla%202024-12-06%20121658.png)
