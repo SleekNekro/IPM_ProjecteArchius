@@ -103,6 +103,35 @@ p {
     transition: all 0.3s;
 }
 
+a {
+    text-decoration: none;
+}
+
+
+.btn-ver-pokemon {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+
+.btn-ver-pokemon:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+
+.btn-ver-pokemon:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
 .btn:hover {
     background: linear-gradient(135deg, #ffcb05, #f39c12);
     color: #fff;
